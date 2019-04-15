@@ -26,6 +26,75 @@ img {
     display: flex;
     flex-direction: column;
 }
+.header {
+    display: flex;
+    
+    .nombre-sitio {
+        flex: 0 0 5rem;
+        padding: 1.3rem;
+        @include desktop(){
+            flex: 0 0 20rem;
+        }
+        background-color: $secundario;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            color: $blanco;
+            margin: 0;
+            padding: 1rem;
+        }
+        .escritorio {
+            display: none;
+            @include desktop{
+                display: block;
+            }
+        }
+        .movil {
+            @include desktop{
+                display: none;
+            }
+        }
+    }
+}
+.barra {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background-color: $primario;
+    padding: 1.3rem;
+
+    .menu-izquierdo {
+        display: flex;
+        align-items: center;
+    }
+    .menu-derecho {
+        display: flex;
+        .caja{
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            &:hover {
+                background-color: darken($primario, 5);
+            }
+
+            a {
+                color: $blanco;
+                text-decoration: none;
+
+                span {
+                    background-color: $terciario;
+                    padding: .3rem;
+                    border-radius: 50%;
+                    margin-left: .2rem;
+                }
+            }
+            
+        }
+
+    }
+}
 .contenedor-principal {
     flex: 1;
 }
+
