@@ -10,7 +10,8 @@ html {
 
 body {
   font-family: "Raleway", sans-serif;
-  height: 100%; }
+  height: 100%;
+  background-color: #eeeeee; }
 
 img {
   max-width: 100%; }
@@ -20,6 +21,9 @@ img {
 
 .oculto {
   display: none; }
+
+.no-menu.pagina .sidebar {
+  margin-left: -20rem; }
 
 .pagina {
   min-height: 100%;
@@ -59,6 +63,11 @@ img {
   .barra .menu-izquierdo {
     display: flex;
     align-items: center; }
+    .barra .menu-izquierdo i {
+      color: #FFFFFF;
+      font-size: 1.4rem; }
+    .barra .menu-izquierdo .fa-arrow-right {
+      display: none; }
   .barra .menu-derecho {
     display: flex; }
     .barra .menu-derecho .caja {
@@ -80,7 +89,8 @@ img {
   background-color: #373737;
   flex: 0 0 20rem;
   padding: 1.2rem;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  transition: margin-left .3s ease; }
   .sidebar .usuario {
     display: flex;
     align-items: center;
@@ -131,3 +141,51 @@ img {
 .contenedor-principal {
   flex: 1;
   display: flex; }
+
+.contenido {
+  flex: 1;
+  padding: 2rem; }
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .formulario .campo {
+    flex: 0 0 100%;
+    display: flex;
+    margin-bottom: 1.2rem;
+    align-items: center; }
+    @media only screen and (min-width: 768px) {
+      .formulario .campo {
+        flex: 0 0 calc(50% - 1rem); } }
+    .formulario .campo.expandir {
+      flex: 0 0 calc(100%);
+      align-items: flex-start; }
+      .formulario .campo.expandir label {
+        flex: 0 0 12.5%; }
+      .formulario .campo.expandir textarea {
+        flex: 1; }
+    .formulario .campo label {
+      flex: 0 0 25%; }
+    .formulario .campo input[type="text"] {
+      flex: 0 0 75%;
+      height: 2rem; }
+    .formulario .campo .opciones {
+      display: flex;
+      flex: 1; }
+      .formulario .campo .opciones label {
+        padding-left: 1.2rem; }
+    .formulario .campo.enviar {
+      display: flex;
+      justify-content: center; }
+      .formulario .campo.enviar .boton {
+        background-color: #005b9f;
+        padding: .5rem 1rem;
+        display: block;
+        text-align: center;
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: background-color .3s ease; }
+        .formulario .campo.enviar .boton:hover {
+          cursor: pointer;
+          background-color: #003e6c; }

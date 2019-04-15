@@ -11,6 +11,7 @@ html {
 body {
     font-family: $fuente_principal;
     height: 100%;
+    background-color:$gris;
 }
 img {
     max-width: 100%;
@@ -21,6 +22,13 @@ img {
 .oculto {
     display: none;
 }
+.no-menu.pagina {
+
+    .sidebar {
+        margin-left: -20rem;
+    }
+}
+
 .pagina {
     min-height: 100%;
     display: flex;
@@ -67,6 +75,15 @@ img {
     .menu-izquierdo {
         display: flex;
         align-items: center;
+
+        i {
+            color: $blanco;
+            font-size: 1.4rem;
+        }
+
+        .fa-arrow-right{
+            display: none;
+        }
     }
     .menu-derecho {
         display: flex;
@@ -99,6 +116,7 @@ img {
     flex: 0 0 20rem;
     padding: 1.2rem;
     color: $blanco;
+    transition: margin-left .3s ease;
     .usuario {
         display: flex;
         align-items: center;
@@ -174,5 +192,57 @@ img {
 .contenedor-principal {
     flex: 1;
     display: flex;
+}
+.contenido {
+    flex: 1;
+    padding: 2rem;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .campo {
+        flex: 0 0 100%;
+        @include tablet{
+            flex: 0 0 calc(50% - 1rem);
+        }
+        display: flex;
+        margin-bottom: 1.2rem;
+        align-items: center;
+
+        &.expandir {
+            flex: 0 0 calc(100%);
+            align-items: flex-start;
+            label {
+                flex: 0 0 12.5%;
+            }
+            textarea {
+                flex: 1;
+            }
+        }
+        label {
+            flex: 0 0 25%;
+        }
+        input[type="text"] {
+            flex: 0 0 75%;
+            height: 2rem;
+        }
+        .opciones {
+            display: flex;
+            flex:1;
+            label{
+                padding-left: 1.2rem;
+            }
+        }
+        &.enviar {
+            display: flex;
+            justify-content: center;
+            .boton {
+                @include boton($primario);
+            }
+        }
+    }
 }
 
