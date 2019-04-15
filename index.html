@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
     <div class="pagina">
         <header class="header">
@@ -50,11 +52,84 @@
             </div>
         </header>
 
-        <main class="contenedor-principal"> 
-            
+        <main class="contenedor-principal">
+            <aside class="sidebar">
+                <div class="usuario">
+                    <img src="img/usuario.svg" alt="Foto Usuario" />
+                    <p> Bienvenido: <span>Admin</span></p>
+                </div>
+                <div class="buscador">
+                    <input type="text" placeholder="Buscar....">
+                </div>
+                <div class="menu-admin">
+                    <h2>Menú de administración</h2>
+                    <ul class="menu">
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-address-book"></i>
+                                Clientes
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fas fa-list"></i> Ver todos</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fas fa-plus"></i> Agregar nuevos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Ventas
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fas fa-list"></i> Ver todos</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fas fa-plus"></i> Agregar nuevos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-box"></i> Inventario</a>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fas fa-list"></i> Ver todos</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fas fa-plus"></i> Agregar nuevos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Facturas</a>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fas fa-list"></i> Ver todos</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fas fa-plus"></i> Agregar nuevos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> Calendario</a>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fas fa-list"></i> Ver todos</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fas fa-plus"></i> Agregar nuevos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-pencil-alt"></i> Editar perfil</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="contenido">
+
+            </div>
         </main>
     </div>
 
-<script src="js/app.js" defer></script>
+    <script src="js/app.js" defer></script>
 </body>
+
 </html>
