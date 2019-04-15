@@ -10,6 +10,7 @@ html {
 }
 body {
     font-family: $fuente_principal;
+    height: 100%;
 }
 img {
     max-width: 100%;
@@ -19,4 +20,12 @@ img {
 }
 .oculto {
     display: none;
+}
+.pagina {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-principal {
+    flex: 1;
 }
